@@ -18,11 +18,15 @@ Không gửi kèm dữ liệu nội bộ, dữ liệu khách hàng, token hay m�
 - **Nhật ký gõ:** tắt mặc định. Khi bật ở menu **Gỡ lỗi**, nhật ký nằm ở
   `~/Library/Application Support/HVN Key/typing-log.jsonl` trên máy bạn, không ghi trong ô mật khẩu, trình quản lý
   mật khẩu hay Terminal.
+- **Trên Windows:** HVN Key đọc phím qua hook bàn phím của Windows, đọc địa chỉ tab trình duyệt qua UI Automation
+  (chỉ khi bật **Nhớ theo trang web**), lưu cài đặt ở `HKCU\Software\HVN Key` và dữ liệu ở `%LOCALAPPDATA%\HVN Key`.
+  Báo cáo lỗi nằm ở `%LOCALAPPDATA%\HVN Key\Crashes` và không tự gửi đi.
 - **Kết nối mạng:** HVN Key chỉ kết nối tới GitHub (`github.com` và máy chủ tải file của GitHub) để kiểm tra và tải
   bản cập nhật từ repo này. Bạn tắt được việc này ở **Mở HVN Key… › Chung › Tự động cập nhật**. App không gửi báo
   cáo lỗi hay số liệu sử dụng về máy chủ nào.
 - **Cập nhật:** dùng Sparkle; mỗi bản cập nhật được ký EdDSA bằng khoá riêng của HVN GROUP, app kiểm chữ ký trước khi
-  cài. Bản cài đặt được ký Developer ID của HVN GROUP và notarize bởi Apple.
+  cài. Bản cài đặt Mac được ký Developer ID của HVN GROUP và notarize bởi Apple; trình cài Windows được ký số của
+  HVN GROUP (Azure Trusted Signing).
 
 ## Phiên bản được hỗ trợ
 

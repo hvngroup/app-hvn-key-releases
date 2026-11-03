@@ -1,6 +1,6 @@
 # HVN Key — bản phát hành
 
-HVN Key là bộ gõ tiếng Việt cho máy Mac chip Apple. Bạn gõ Telex như bình thường; khi gõ một từ tiếng Anh lúc đang ở
+HVN Key là bộ gõ tiếng Việt cho máy Mac chip Apple và máy tính Windows. Bạn gõ Telex như bình thường; khi gõ một từ tiếng Anh lúc đang ở
 chế độ tiếng Việt (hoặc ngược lại), HVN Key tự sửa từ đó và tự chuyển ngôn ngữ cho bạn.
 
 Repo này chỉ chứa bản phát hành và kênh cập nhật của ứng dụng. Mã nguồn được quản lý riêng tại HVN GROUP; gói mã
@@ -13,14 +13,17 @@ Tải bản mới nhất tại **[Releases › Latest](https://github.com/hvngro
 | Máy | File |
 |---|---|
 | Mac chip Apple (M1 trở lên), macOS 13 Ventura trở lên | `HVNKey.dmg` |
+| Máy Windows 10/11 thông thường (Intel, AMD) | `HVNKey-<phiên bản>-x64-Setup.exe` |
+| Máy Windows 11 chip ARM (Snapdragon) | `HVNKey-<phiên bản>-arm64-Setup.exe` |
 
 - Mỗi file có một file `.sha256` đi kèm để kiểm tra file tải về còn nguyên vẹn:
   `shasum -a 256 -c HVNKey.dmg.sha256`.
 - `HVNKey.zip` và `appcast.xml` dành cho trình cập nhật trong app. Bạn không cần tải hai file này.
+- Trên Windows, kiểm tra bằng PowerShell: `Get-FileHash .\HVNKey-<phiên bản>-x64-Setup.exe` rồi so với file `.sha256`.
 - `HVNKey-<phiên bản>-source.tar.gz` là mã nguồn tương ứng với bản phát hành đó.
 - HVN Key không chạy trên Mac dùng chip Intel.
 
-## Cài đặt
+## Cài đặt trên Mac
 
 1. Mở `HVNKey.dmg`, kéo **HVN Key** vào thư mục **Applications**.
 2. Mở **HVN Key** từ **Applications**. Bản phát hành được ký Developer ID của HVN GROUP và đã được Apple kiểm tra
@@ -31,13 +34,22 @@ Tải bản mới nhất tại **[Releases › Latest](https://github.com/hvngro
 4. Nếu bật **Nhớ theo trang web**, macOS hỏi thêm quyền điều khiển trình duyệt để HVN Key đọc địa chỉ tab đang mở.
    Địa chỉ này chỉ dùng trên máy bạn.
 
+## Cài đặt trên Windows
+
+1. Chạy `HVNKey-<phiên bản>-<x64 hoặc arm64>-Setup.exe`. Trình cài được ký số của HVN GROUP, cài cho tài khoản Windows
+   đang dùng (không cần quyền quản trị) và tự mở HVN Key khi đăng nhập Windows.
+2. Biểu tượng **V/E** hiện ở khay hệ thống (góc phải thanh tác vụ). Bấm chuột phải để bật tắt tiếng Việt, mở
+   **Mở HVN Key…** hoặc **Hướng dẫn…**.
+3. Gỡ cài đặt: **Cài đặt › Ứng dụng › Ứng dụng đã cài đặt › HVN Key › Gỡ cài đặt**.
+
 Nếu máy đang cài một bộ gõ khác (Vikey, OpenKey, EVKey, Unikey…), hãy tắt bộ gõ đó để hai bộ gõ không cùng xử lý
 phím.
 
 ## Cập nhật
 
 HVN Key tự kiểm tra bản mới mỗi ngày từ repo này, tải về và cài khi bạn thoát app hoặc tắt máy. Bạn có thể tắt tự động
-cập nhật ở **Mở HVN Key… › Chung › Tự động cập nhật**, hoặc kiểm tra thủ công bằng **Kiểm tra cập nhật…** trên menu.
+cập nhật trong cửa sổ **Mở HVN Key…** (công tắc **Tự động cập nhật**), hoặc kiểm tra thủ công bằng **Kiểm tra cập
+nhật…** trên menu thanh trạng thái (Mac) hoặc menu khay hệ thống (Windows).
 Mọi bản cập nhật đều được ký bằng khoá riêng của HVN GROUP; app từ chối bản cập nhật không đúng chữ ký.
 
 ## Báo lỗi và hỗ trợ
