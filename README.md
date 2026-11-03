@@ -13,13 +13,13 @@ Tải bản mới nhất tại **[Releases › Latest](https://github.com/hvngro
 | Máy | File |
 |---|---|
 | Mac chip Apple (M1 trở lên), macOS 13 Ventura trở lên | `HVNKey.dmg` |
-| Máy Windows 10/11 thông thường (Intel, AMD) | `HVNKey-<phiên bản>-x64-Setup.exe` |
-| Máy Windows 11 chip ARM (Snapdragon) | `HVNKey-<phiên bản>-arm64-Setup.exe` |
+| Máy Windows 10/11 thông thường (Intel, AMD) | `HVNKey-<phiên bản>-x64.msi` |
+| Máy Windows 11 chip ARM (Snapdragon) | `HVNKey-<phiên bản>-arm64.msi` |
 
 - Mỗi file có một file `.sha256` đi kèm để kiểm tra file tải về còn nguyên vẹn:
   `shasum -a 256 -c HVNKey.dmg.sha256`.
 - `HVNKey.zip` và `appcast.xml` dành cho trình cập nhật trong app. Bạn không cần tải hai file này.
-- Trên Windows, kiểm tra bằng PowerShell: `Get-FileHash .\HVNKey-<phiên bản>-x64-Setup.exe` rồi so với file `.sha256`.
+- Trên Windows, kiểm tra bằng PowerShell: `Get-FileHash .\HVNKey-<phiên bản>-x64.msi` rồi so với file `.sha256`.
 - `HVNKey-<phiên bản>-source.tar.gz` là mã nguồn tương ứng với bản phát hành đó.
 - HVN Key không chạy trên Mac dùng chip Intel.
 
@@ -36,7 +36,7 @@ Tải bản mới nhất tại **[Releases › Latest](https://github.com/hvngro
 
 ## Cài đặt trên Windows
 
-1. Chạy `HVNKey-<phiên bản>-<x64 hoặc arm64>-Setup.exe`. Trình cài được ký số của HVN GROUP, cài cho tài khoản Windows
+1. Mở file `HVNKey-<phiên bản>-<x64 hoặc arm64>.msi`. Bộ cài MSI được ký số của HVN GROUP, cài cho tài khoản Windows
    đang dùng (không cần quyền quản trị) và tự mở HVN Key khi đăng nhập Windows.
 2. Biểu tượng **V/E** hiện ở khay hệ thống (góc phải thanh tác vụ). Bấm chuột phải để bật tắt tiếng Việt, mở
    **Mở HVN Key…** hoặc **Hướng dẫn…**.
