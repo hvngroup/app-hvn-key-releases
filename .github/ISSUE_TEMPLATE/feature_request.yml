@@ -1,0 +1,22 @@
+name: Đề xuất tính năng
+description: Ý tưởng làm HVN Key tốt hơn
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Vấn đề cần giải quyết
+      description: Anh/chị đang gặp khó khăn gì khi gõ?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Đề xuất
+      description: HVN Key nên làm gì?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Cách khác đã cân nhắc
