@@ -1,0 +1,57 @@
+name: Báo lỗi
+description: HVN Key gõ sai hoặc hoạt động không đúng như mong đợi
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn anh/chị đã báo lỗi. **Không dán mật khẩu, thông tin nội bộ hay dữ liệu khách hàng.**
+        Lỗ hổng bảo mật: gửi riêng theo [SECURITY.md](../blob/main/SECURITY.md), không mở issue công khai.
+  - type: textarea
+    id: keys
+    attributes:
+      label: Phím đã gõ
+      description: Ghi đúng các phím đã bấm, ví dụ `truowfng`.
+    validations:
+      required: true
+  - type: textarea
+    id: got
+    attributes:
+      label: Chữ hiện ra
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Chữ mong muốn
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: Ứng dụng đang gõ
+      description: Ví dụ Safari, Chrome (trang nào), Word, Slack, Terminal.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Phiên bản HVN Key
+      description: Xem ở menu HVN Key → Giới thiệu HVN Key.
+      placeholder: "1.0.0 (1)"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: Phiên bản macOS
+      placeholder: "macOS 15.5"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Ảnh chụp, video hoặc báo cáo lỗi
+      description: >-
+        Nếu app bị thoát đột ngột, đính kèm file bắt đầu bằng `HVNKey` trong
+        `~/Library/Logs/DiagnosticReports`. Báo cáo không chứa chữ bạn đã gõ.
