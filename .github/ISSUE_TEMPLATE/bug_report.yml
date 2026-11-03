@@ -44,8 +44,8 @@ body:
   - type: input
     id: macos
     attributes:
-      label: Phiên bản macOS
-      placeholder: "macOS 15.5"
+      label: Hệ điều hành và phiên bản
+      placeholder: "macOS 15.5 / Windows 11 24H2"
     validations:
       required: true
   - type: textarea
@@ -54,4 +54,4 @@ body:
       label: Ảnh chụp, video hoặc báo cáo lỗi
       description: >-
         Nếu app bị thoát đột ngột, đính kèm file bắt đầu bằng `HVNKey` trong
-        `~/Library/Logs/DiagnosticReports`. Báo cáo không chứa chữ bạn đã gõ.
+        `~/Library/Logs/DiagnosticReports` (Mac) hoặc `%LOCALAPPDATA%\HVN Key\Crashes` (Windows). Báo cáo không chứa chữ bạn đã gõ.
